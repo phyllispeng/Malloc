@@ -1,0 +1,20 @@
+### Checking for illegal functions inside of yupeng/
+### Check for sfmm.c and see if it builds with -Wall and -Werror
+Program doesn't compile with -Wall -Werror. (5/5)
+### Check for assignment defined functions
+
+[1;32mSUCCESS: 320main.c:basictest:58 Test1: malloc and got non-null address. (5/5)
+
+[0m[1;32mSUCCESS: 320main.c:basictest:63 Test2: Assigned value correctly without segfault. (5/5)
+[0m[1;32mSUCCESS: 320main.c:basictest:66 Test3: Allocated a second value without segfault. (2/2)
+
+[0m[1;32mSUCCESS: 320main.c:basictest:67 Test4: Newly allocated block has a new address. (2/2)
+
+[0m[1;32mSUCCESS: 320main.c:basictest:70 Test5: Assigned value without segfault to new block. (2/2)
+[0m[1;32mSUCCESS: 320main.c:basictest:75 Test6: First allocated block still has the same value. (2/2)
+[0m[1;31mERROR: 320main.c:address_test:85 - Test7: Expected address to be divisible by 16 (0/5)
+[0m[1;31mERROR: 320main.c:address_test:87 - Test7: Returned address 0x1d0e028
+[0m[1;32mSUCCESS: 320main.c:address_test:94 Test8: Header has "correct" allocated size and allocated bit. (5/5)
+[0m[1;31mERROR: 320main.c:address_test:101 - Test9: Footer has incorrect value - expected 0x21 | 0x101 | 0x41 but got 0x0. (0/5)
+[0m[1;31mERROR: 320main.c:address_test:108 - Test10: Requested size has an incorrect value - expected 0x1 but got 0x100. (0/5)
+[0m
